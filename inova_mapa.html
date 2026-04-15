@@ -26,14 +26,12 @@
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <style>
         #map {
-            position: relative;
-            width: 100.0%;
-            height: 100.0%;
-            left: 0.0%;
-            top: 0.0%;
-            background:transparent !important;
-        
-
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: transparent !important;
         }
         .leaflet-container { font-size: 1rem; }
 
@@ -41,10 +39,7 @@
             background: transparent !important;
         }    
 
-        #map {
-            background: transparent !important;
-        }
-        
+    
 
     </style>
         
@@ -63,7 +58,7 @@
             center: [-19.53649, -40.63173], //center: [-20.329, -40.292],
             crs: L.CRS.EPSG3857,
             ...{
-                "zoom":8,
+                "zoom":7,
                 "zoomControl": false,
                 "preferCanvas": false,
                 attributionControl: false, // remove "Leaflet" (ajuda no visual limpo)
@@ -74,7 +69,7 @@
     function geo_json_styler(feature) {
         switch(feature.properties.CD_MUN) {
             default:
-                return {"color": "#263F73", "fillColor": "#263F73", "fillOpacity": 1.0, "weight": 10};
+                return {"color": "#263F73", "fillColor": "#263F73", "fillOpacity": 1.0, "weight": 4};
         }
     }
 
