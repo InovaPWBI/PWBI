@@ -60,10 +60,10 @@
     var map = L.map(
         "map",
         {
-            center: [-20.329, -40.292],
+            center: [-20.3422752, -40.284708], //center: [-20.329, -40.292],
             crs: L.CRS.EPSG3857,
             ...{
-                "zoom":7,
+                "zoom":10,
                 "zoomControl": false,
                 "preferCanvas": false,
                 attributionControl: false, // remove "Leaflet" (ajuda no visual limpo)
@@ -74,7 +74,7 @@
     function geo_json_styler(feature) {
         switch(feature.properties.CD_MUN) {
             default:
-                return {"color": "#263F73", "fillColor": "#263F73", "fillOpacity": 1.0, "weight": 3};
+                return {"color": "#263F73", "fillColor": "#263F73", "fillOpacity": 1.0, "weight": 10};
         }
     }
 
